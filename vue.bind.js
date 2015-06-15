@@ -1,0 +1,4 @@
+// Auto-binding
+Vue.extend({
+	
+})

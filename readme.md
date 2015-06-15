@@ -36,11 +36,11 @@ stateMap:
 			"color: blue"
 		],
 		// Default behavior is one state at a time
-		multistate: [
-			"&& allowedMultiState",
-			"!! disallowedState",
-			"&&"		//Allow any combination of state
-		]
+		multistate: {
+			"allow": "allowedMultiState",
+			"disallow": "disallowedState",
+			"all"		//Allow any combination of state
+		}
 
 $view('.todo-list:first-child').('checkbox').value;
 $view('.todo-list:first-child').('input').value;
@@ -55,4 +55,6 @@ Tokamak combines
 2. Backbone		(View/Model abstraction + routing)
 3. Vue.js		(Two way binding / DOM construction)
 4. Q 			(Promises)
-5. Firebase 	(3-Way Binding)
+5. Firebase 	(OPTIONAL: 3-Way Binding)
+6. Browserify	(For require script loading)
+7. Gulp			(For pre-building the site / combining templates)
